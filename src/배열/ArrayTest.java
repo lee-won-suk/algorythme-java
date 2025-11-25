@@ -56,6 +56,9 @@ public class ArrayTest {
                 + ", sum :" + intSummaryStatistics.getSum() + ", avg :" + intSummaryStatistics.getAverage()
                 + ", count :" + intSummaryStatistics.getCount());
 
+
+
+
         //배열의 정렬
         int [] sortArr = IntStream.of(1,4,3,2,5).toArray();
         //오름차순
@@ -63,6 +66,8 @@ public class ArrayTest {
         System.out.println(Arrays.toString(sortArr));
         //내림차순
         Integer [] boxedArr = Arrays.stream(sortArr).boxed().toArray(Integer[]::new);
+
+
         Arrays.sort(boxedArr, Collections.reverseOrder());
         System.out.println(Arrays.toString(boxedArr));
 
@@ -80,8 +85,12 @@ public class ArrayTest {
 
         intArr = str.chars().map(Character::getNumericValue).toArray();
 
+
+
+
+        int [] brr = new int[10];
+
+        str.chars().map(Character::getNumericValue).toArray();
     }
-
-
 
 }
